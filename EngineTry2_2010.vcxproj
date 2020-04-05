@@ -416,6 +416,7 @@
   <ItemGroup>
     <ClInclude Include="DXUT\Optional\SDKsound.h" />
     <ClInclude Include="DXUT\Optional\SDKwavefile.h" />
+    <ClInclude Include="EngineTry2.h" />
     <CLInclude Include="resource.h" />
     <ResourceCompile Include="EngineTry2.rc" />
   </ItemGroup>
