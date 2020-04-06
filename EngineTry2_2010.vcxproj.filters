@@ -12,6 +12,12 @@
       <UniqueIdentifier>{2c3d4c8c-5d1a-459a-a05a-a4e4b608a44e}</UniqueIdentifier>
       <Extensions>fx;fxh;hlsl</Extensions>
     </Filter>
+    <Filter Include="Managers">
+      <UniqueIdentifier>{d9ef870e-6c0f-4095-84be-947e008014ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{d3d21207-8676-43c6-aac4-7090762a50bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -80,6 +86,15 @@
     <ClCompile Include="DXUT\Optional\SDKwavefile.cpp">
       <Filter>DXUT</Filter>
     </ClCompile>
+    <ClCompile Include="TextureInfo.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Layer.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DXUT\Optional\SDKsound.h">
@@ -89,6 +104,15 @@
       <Filter>DXUT</Filter>
     </ClInclude>
     <ClInclude Include="EngineTry2.h" />
+    <ClInclude Include="TextureInfo.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">

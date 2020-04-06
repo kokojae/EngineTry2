@@ -384,6 +384,12 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Layer.cpp" />
+    <ClCompile Include="TextureInfo.cpp" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Layer.h" />
+    <ClInclude Include="TextureInfo.h" />
     <None Include="DXUT\Optional\directx.ico" />
     <ClInclude Include="DXUT\Core\DXUT.h" />
     <ClInclude Include="DXUT\Core\DXUTenum.h" />
