@@ -89,6 +89,29 @@ void CALLBACK OnD3D9FrameRender( IDirect3DDevice9* pd3dDevice, double fTime, flo
 LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
                           bool* pbNoFurtherProcessing, void* pUserContext )
 {
+    if (uMsg == WM_LBUTTONDOWN)
+        MouseManager::leftBtn = true;
+    if (uMsg == WM_MBUTTONDOWN)
+        MouseManager::rightBtn = true;
+    if (uMsg == WM_RBUTTONDOWN)
+        MouseManager::middleBtn = true;
+
+    if (uMsg == WM_LBUTTONUP)
+        MouseManager::leftBtn = false;
+    if (uMsg == WM_MBUTTONUP)
+        MouseManager::rightBtn = false;
+    if (uMsg == WM_RBUTTONUP)
+        MouseManager::middleBtn = false;
+
+    if (uMsg == WM_MOUSEMOVE)
+    {
+        MouseManager::position = {
+            GET_X_LPARAM(lParam) - SCREEN_WIDTH / 2,
+            GET_Y_LPARAM(lParam) - SCREEN_HEIGHT / 2
+        };
+        MouseManager::position += Camera::position;
+    }
+
     return 0;
 }
 
