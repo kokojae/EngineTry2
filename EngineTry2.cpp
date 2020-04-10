@@ -63,6 +63,8 @@ HRESULT CALLBACK OnD3D9ResetDevice( IDirect3DDevice9* pd3dDevice, const D3DSURFA
 //--------------------------------------------------------------------------------------
 void CALLBACK OnFrameMove( double fTime, float fElapsedTime, void* pUserContext )
 {
+    ObjectManager::Update();
+    ObjectManager::LateUpdate();
 }
 
 
@@ -131,6 +133,7 @@ void CALLBACK OnD3D9LostDevice( void* pUserContext )
 void CALLBACK OnD3D9DestroyDevice( void* pUserContext )
 {
     SoundManager::EndAllSFX();
+    ObjectManager::Release();
     TextureManager::ReleaseAllTexture();
 }
 
