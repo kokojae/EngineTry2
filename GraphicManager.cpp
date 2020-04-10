@@ -8,7 +8,7 @@ ID3DXFont* GraphicManager::font = nullptr;
 void GraphicManager::Init()
 {
 	D3DXCreateSprite(DXUTGetD3D9Device(), &sprite);
-	D3DXCreateFont(DXUTGetD3D9Device(), 15, 0, FW_BOLD, 1, FALSE, DEFAULT_CHARSET,
+	D3DXCreateFont(DXUTGetD3D9Device(), 70, 0, FW_BOLD, 1, FALSE, DEFAULT_CHARSET,
 		OUT_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH | FF_DONTCARE,
 		L"Arial", &font);
 }

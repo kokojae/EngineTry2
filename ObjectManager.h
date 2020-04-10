@@ -34,5 +34,5 @@ inline T* ObjectManager::Instantiate(D3DXVECTOR2 position)
 	inst->position = position;
 	objectList.sort(Sort);
 
-	return NULL;
+	return inst;
 }
