@@ -111,8 +111,8 @@ LRESULT CALLBACK MsgProc( HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam,
     if (uMsg == WM_MOUSEMOVE)
     {
         MouseManager::position = {
-            GET_X_LPARAM(lParam) - SCREEN_WIDTH / 2,
-            GET_Y_LPARAM(lParam) - SCREEN_HEIGHT / 2
+            static_cast<float>(GET_X_LPARAM(lParam) - SCREEN_WIDTH / 2),
+            static_cast<float>(GET_Y_LPARAM(lParam) - SCREEN_HEIGHT / 2)
         };
         MouseManager::position += Camera::position;
     }
