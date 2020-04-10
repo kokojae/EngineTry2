@@ -384,12 +384,14 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BoxCollider.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="MouseManager.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="TextureInfo.cpp" />
     <ClCompile Include="TextureManager.cpp" />
+    <ClInclude Include="BoxCollider.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="MouseManager.h" />

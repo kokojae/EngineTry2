@@ -5,6 +5,7 @@
 #define WINDOWED true
 
 // Components
+#include "BoxCollider.h"
 #include "TextureInfo.h"
 
 // Managers
