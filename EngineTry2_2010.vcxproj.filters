@@ -110,6 +110,9 @@
     <ClCompile Include="ObjectManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
+    <ClCompile Include="GraphicManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DXUT\Optional\SDKsound.h">
@@ -141,6 +144,9 @@
       <Filter>Components</Filter>
     </ClInclude>
     <ClInclude Include="ObjectManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicManager.h">
       <Filter>Managers</Filter>
     </ClInclude>
   </ItemGroup>
