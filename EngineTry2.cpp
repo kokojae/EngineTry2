@@ -44,6 +44,7 @@ HRESULT CALLBACK OnD3D9CreateDevice( IDirect3DDevice9* pd3dDevice, const D3DSURF
 {
     GraphicManager::Init();
     SoundManager::Init();
+    ObjectManager::Instantiate<Text>()->SetText(L"Test", { 0.4,0.4 });
     return S_OK;
 }
 
