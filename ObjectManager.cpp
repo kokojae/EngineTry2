@@ -2,6 +2,8 @@
 #include "ObjectManager.h"
 #include "EngineTry2.h"
 
+std::list<GameObject*> ObjectManager::objectList = std::list<GameObject*>();
+
 void ObjectManager::Update()
 {
 }

@@ -2,7 +2,6 @@
 #include "SoundManager.h"
 
 CSoundManager* SoundManager::SFXManager = nullptr;
-
 std::map<std::wstring, CSound*> SoundManager::SFXMap = std::map<std::wstring, CSound*>();
 
 void SoundManager::Init()
