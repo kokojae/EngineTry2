@@ -61,7 +61,7 @@ void GraphicManager::TextRender(std::wstring text, D3DXVECTOR2 position, D3DXVEC
 	mat = sca * pos;
 
 	if (!isUI)
-		Camera::GetCamMat();
+		mat *= Camera::GetCamMat();
 
 	sprite->SetTransform(&mat);
 
