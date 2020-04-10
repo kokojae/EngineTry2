@@ -18,6 +18,12 @@
     <Filter Include="Components">
       <UniqueIdentifier>{d3d21207-8676-43c6-aac4-7090762a50bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{5d751318-5266-4263-af65-865ecbb760b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Base">
+      <UniqueIdentifier>{886db125-fe5b-4673-b236-3d500e71ece9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -113,6 +119,9 @@
     <ClCompile Include="GraphicManager.cpp">
       <Filter>Managers</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>GameObject\Base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DXUT\Optional\SDKsound.h">
@@ -148,6 +157,9 @@
     </ClInclude>
     <ClInclude Include="GraphicManager.h">
       <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>GameObject\Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

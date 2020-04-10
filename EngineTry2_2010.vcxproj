@@ -386,6 +386,7 @@
   <ItemGroup>
     <ClCompile Include="BoxCollider.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GraphicManager.cpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="MouseManager.cpp" />
@@ -395,6 +396,7 @@
     <ClCompile Include="TextureManager.cpp" />
     <ClInclude Include="BoxCollider.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="GameObject.h" />
     <ClInclude Include="GraphicManager.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="MouseManager.h" />
