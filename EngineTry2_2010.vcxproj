@@ -391,6 +391,7 @@
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="MouseManager.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="TextureInfo.cpp" />
@@ -402,6 +403,7 @@
     <ClInclude Include="Layer.h" />
     <ClInclude Include="MouseManager.h" />
     <ClInclude Include="ObjectManager.h" />
+    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="Text.h" />
     <ClInclude Include="TextureInfo.h" />
