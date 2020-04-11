@@ -8,6 +8,7 @@ class GameObject
 {
 public:
 	D3DXVECTOR2 position = { 0,0 };
+	D3DXVECTOR2 force = { 0,0 };
 	TextureInfo info;
 	BoxCollider collider;
 	bool destroy = false;
@@ -20,6 +21,9 @@ public:
 	virtual void LateUpdate();
 	virtual void Render();
 	virtual void Release();
+
+	void Gravity();
+	void AddForce();
 
 	void DrawSelf();
 

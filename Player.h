@@ -6,9 +6,6 @@ class Player :
 public:
 	static Player* me;
 
-	float vspeed = 0;
-	float hspeed = 0;
-
 	D3DXVECTOR2 camera_position;
 
 	void Init();
@@ -17,7 +14,6 @@ public:
 
 	void GetKey();
 	void Hspeed();
-	void Gravity();
 	void CameraMove();
 };
 

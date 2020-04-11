@@ -15,6 +15,7 @@ void Player::Update()
 	GetKey();
 	Hspeed();
 	Gravity();
+	AddForce();
 }
 
 void Player::LateUpdate()
@@ -30,24 +31,24 @@ void Player::GetKey()
 	}
 	if (GetAsyncKeyState(VK_LEFT))
 	{
-		if (hspeed > -5)
-			hspeed -= 0.5f;
+		if (force.x > -5)
+			force.x -= 0.5f;
 	}
 	if (GetAsyncKeyState(VK_RIGHT))
 	{
-		if (hspeed < 5)
-			hspeed += 0.5f;
+		if (force.x < 5)
+			force.x += 0.5f;
 	}
 	if (!GetAsyncKeyState(VK_LEFT) && !GetAsyncKeyState(VK_RIGHT))
 	{
-		hspeed -= hspeed / 20;
+		force.x -= force.x / 20;
 	}
 	if (GetAsyncKeyState(VK_UP))
 	{
 		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))
 		{
 			SoundManager::PlaySFX(L"Source/Jump.wav");
-			vspeed = -15;
+			force.y = -15;
 		}
 	}
 
@@ -63,27 +64,9 @@ void Player::GetKey()
 
 void Player::Hspeed()
 {
-	if (PlaceMeeting({ hspeed,0 }, Layer::BLOCK) != nullptr)
+	if (PlaceMeeting({ force.x,0 }, Layer::BLOCK) != nullptr)
 	{
-		hspeed = 0;
-	}
-	else
-	{
-		position.x += hspeed;
-	}
-}
-
-void Player::Gravity()
-{
-	vspeed += 0.5f;
-
-	if (PlaceMeeting({ 0,vspeed }, Layer::BLOCK) != nullptr)
-	{
-		vspeed = 0;
-	}
-	else
-	{
-		position.y += vspeed;
+		force.x = 0;
 	}
 }
 
