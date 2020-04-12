@@ -1,8 +1,8 @@
 #pragma once
 
-#define SCREEN_WIDTH 1280
-#define SCREEN_HEIGHT 720
-#define WINDOWED true
+#define SCREEN_WIDTH 1920
+#define SCREEN_HEIGHT 1080
+#define WINDOWED false
 
 // Components
 #include "BoxCollider.h"
