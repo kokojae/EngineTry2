@@ -18,22 +18,8 @@ void SceneManager::LoadScene(Scene scene)
 	switch (scene)
 	{
 	case SceneManager::Scene::Intro:
-		SoundManager::PlaySFX(L"Source/test.wav");
-
-		ObjectManager::Instantiate<Text>({ 0,300 })->SetText(L"방향키 이동 WASD 카메라 조작\n씬이동 스페이스바", { 0.5,0.5 });
-
-		ObjectManager::Instantiate<Block>({ 0,200 });
-		ObjectManager::Instantiate<Block>({ 100,200 });
-		ObjectManager::Instantiate<Block>({ 200,200 });
-		ObjectManager::Instantiate<Block>({ 300,100 });
-		ObjectManager::Instantiate<Block>({ 400,200 });
-		ObjectManager::Instantiate<Block>({ -100,100 });
-		ObjectManager::Instantiate<Block>({ 0,-100 });;
-
-		ObjectManager::Instantiate<Player>();
 		break;
 	case SceneManager::Scene::Main:
-		ObjectManager::Instantiate<Text>({ 0, -100 })->SetText(L"여기는 게임씬", { 0.5,0.5 });
 		break;
 	case SceneManager::Scene::HowTo:
 		break;
@@ -42,8 +28,20 @@ void SceneManager::LoadScene(Scene scene)
 	case SceneManager::Scene::Credit:
 		break;
 	case SceneManager::Scene::Stage1:
+		for (int i = -10; i < 10; i++)
+		{
+			ObjectManager::Instantiate<Block>({ static_cast<float>(i * 320),400 });
+		}
+
+		GameManager::player = ObjectManager::Instantiate<Player>();
 		break;
 	case SceneManager::Scene::Stage2:
+		for (int i = -10; i < 10; i++)
+		{
+			ObjectManager::Instantiate<Block>({ static_cast<float>(i * 320),400 });
+		}
+
+		GameManager::player = ObjectManager::Instantiate<Player>();
 		break;
 	default:
 		break;
