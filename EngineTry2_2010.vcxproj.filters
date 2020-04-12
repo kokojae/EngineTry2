@@ -140,6 +140,9 @@
     <ClCompile Include="Block.cpp">
       <Filter>GameObject\Block</Filter>
     </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DXUT\Optional\SDKsound.h">
@@ -190,6 +193,9 @@
     </ClInclude>
     <ClInclude Include="Block.h">
       <Filter>GameObject\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Managers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
