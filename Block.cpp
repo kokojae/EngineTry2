@@ -1,8 +1,18 @@
 #include "DXUT.h"
 #include "Block.h"
+#include "EngineTry2.h"
 
 void Block::Init()
 {
-	SetObject(L"Block", 0, L"Source/block.png", { 100,100 }, { 100,100 }, Layer::BLOCK);
-	info.color = D3DCOLOR_ARGB(180, 255, 30, 0);
+	switch (SceneManager::currentScene)
+	{
+	case SceneManager::Scene::Stage1:
+		SetObject(L"Block", 0, L"resorce/ground/stage1/nomal.png", { 320,320 }, { 320,320 }, Layer::BLOCK);
+		break;
+	case SceneManager::Scene::Stage2:
+		SetObject(L"Block", 0, L"resorce/ground/stage2/nomal.png", { 320,320 }, { 320,320 }, Layer::BLOCK);
+		break;
+	default:
+		break;
+	}	
 }

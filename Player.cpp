@@ -7,7 +7,7 @@ Player* Player::me = nullptr;
 void Player::Init()
 {
 	me = this;
-	SetObject(L"Player", 10, L"Source/player.png", { 100,100 }, { 80,80 }, Layer::PLAYER);
+	SetObject(L"Player", 10, L"resorce/player/player1.png", { 300,150 }, { 300,150 }, Layer::PLAYER, { 0.7,0.7 });
 }
 
 void Player::Update()
@@ -25,10 +25,6 @@ void Player::LateUpdate()
 
 void Player::GetKey()
 {
-	if (GetAsyncKeyState(VK_SPACE))
-	{
-		SceneManager::LoadScene(SceneManager::Scene::Main);
-	}
 	if (GetAsyncKeyState(VK_LEFT))
 	{
 		if (force.x > -5)
@@ -47,19 +43,9 @@ void Player::GetKey()
 	{
 		if (PlaceMeeting({ 0,10 }, Layer::BLOCK))
 		{
-			SoundManager::PlaySFX(L"Source/Jump.wav");
 			force.y = -15;
 		}
 	}
-
-	if (GetAsyncKeyState('W'))
-		Camera::scale -= Camera::scale * 0.2;
-	if (GetAsyncKeyState('S'))
-		Camera::scale += Camera::scale * 0.2;
-	if (GetAsyncKeyState('D'))
-		Camera::degree += 5;
-	if (GetAsyncKeyState('A'))
-		Camera::degree -= 5;
 }
 
 void Player::Hspeed()
@@ -72,6 +58,5 @@ void Player::Hspeed()
 
 void Player::CameraMove()
 {
-
-	Camera::position += (position - Camera::position) / 30;
+	Camera::position.x += (position.x - Camera::position.x) / 30;
 }
