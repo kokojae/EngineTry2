@@ -26,7 +26,7 @@ void GameObject::Release()
 void GameObject::Gravity()
 {
 	force.y += 0.5;
-	if (PlaceMeeting({ 0,force.y }, Layer::BLOCK) != nullptr)
+	if (PlaceMeeting({ 0,force.y }, Layer::BLOCK | Layer::BLOCK_UP) != nullptr)
 		force.y = 0;
 }
 
