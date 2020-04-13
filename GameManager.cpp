@@ -3,10 +3,13 @@
 #include "EngineTry2.h"
 
 Player* GameManager::player = nullptr;
+double GameManager::changeTime = 0;
 
 void GameManager::Init()
 {
 	SceneManager::LoadScene(SceneManager::Scene::Intro);
+
+	changeTime = DXUTGetTime();
 }
 
 void GameManager::Update()
@@ -17,11 +20,19 @@ void GameManager::Update()
 	}
 	if (GetAsyncKeyState(VK_F2))
 	{
-
+		if ((changeTime + 0.5) <= DXUTGetTime())
+		{
+			changeTime = DXUTGetTime();
+			player->Upgrade();
+		}
 	}
 	if (GetAsyncKeyState(VK_F3))
 	{
-
+		if ((changeTime + 0.5) <= DXUTGetTime())
+		{
+			changeTime = DXUTGetTime();
+			player->DownGrade();
+		}
 	}
 	if (GetAsyncKeyState(VK_F4))
 	{

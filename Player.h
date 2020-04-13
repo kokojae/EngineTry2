@@ -4,9 +4,15 @@ class Player :
 	public GameObject
 {
 public:
+	enum class State { PANZER, WHIPPET, HEAVYTANK };
+
 	static Player* me;
 
-	D3DXVECTOR2 camera_position;
+	State playerState;
+
+	LPDIRECT3DTEXTURE9 panzer;
+	LPDIRECT3DTEXTURE9 whippet;
+	LPDIRECT3DTEXTURE9 heavyTank;
 
 	void Init();
 	void Update();
@@ -15,5 +21,8 @@ public:
 	void GetKey();
 	void Hspeed();
 	void CameraMove();
+
+	void Upgrade();
+	void DownGrade();
 };
 

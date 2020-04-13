@@ -7,7 +7,13 @@ Player* Player::me = nullptr;
 void Player::Init()
 {
 	me = this;
+	playerState = State::PANZER;
+
 	SetObject(L"Player", 10, L"resorce/player/player1.png", { 300,150 }, { 300,150 }, Layer::PLAYER, { 0.7,0.7 });
+
+	panzer = TextureManager::LoadTexture(L"resorce/player/player1.png");
+	whippet = TextureManager::LoadTexture(L"resorce/player/player2.png");
+	heavyTank = TextureManager::LoadTexture(L"resorce/player/player3.png");
 }
 
 void Player::Update()
@@ -59,4 +65,38 @@ void Player::Hspeed()
 void Player::CameraMove()
 {
 	Camera::position.x += (position.x - Camera::position.x) / 30;
+}
+
+void Player::Upgrade()
+{
+	switch (playerState)
+	{
+	case Player::State::PANZER:
+		playerState = State::WHIPPET;
+		info.texture = whippet;
+		break;
+	case Player::State::WHIPPET:
+		playerState = State::HEAVYTANK;
+		info.texture = heavyTank;
+		break;
+	default:
+		break;
+	}
+}
+
+void Player::DownGrade()
+{
+	switch (playerState)
+	{
+	case Player::State::WHIPPET:
+		playerState = State::PANZER;
+		info.texture = panzer;
+		break;
+	case Player::State::HEAVYTANK:
+		playerState = State::WHIPPET;
+		info.texture = whippet;
+		break;
+	default:
+		break;
+	}
 }
