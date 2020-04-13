@@ -5,6 +5,7 @@ class Player :
 {
 public:
 	enum class State { PANZER, WHIPPET, HEAVYTANK };
+	enum class Item { DOUBLE_JUMP, SPEED_UP, RANGE_INCREASED, THREE_DIRECTION };
 
 	static Player* me;
 
@@ -13,6 +14,16 @@ public:
 	LPDIRECT3DTEXTURE9 panzer;
 	LPDIRECT3DTEXTURE9 whippet;
 	LPDIRECT3DTEXTURE9 heavyTank;
+
+	float doubleJumpTime;
+	float speedUpTime;
+	float rangeIncreasedTime;
+	float threeDirectionTime;
+
+	bool isDoubleJump;
+	bool isSpeedUp;
+	bool isRangeIncreased;
+	bool isThreeDirection;
 
 	void Init();
 	void Update();
@@ -24,5 +35,8 @@ public:
 
 	void Upgrade();
 	void DownGrade();
+
+	void UsingItem(Item item);
+	void ItemManagement();
 };
 

@@ -390,6 +390,7 @@
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GraphicManager.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="MouseManager.cpp" />
     <ClCompile Include="ObjectManager.cpp" />
@@ -405,6 +406,7 @@
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GraphicManager.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="MouseManager.h" />
     <ClInclude Include="ObjectManager.h" />

@@ -14,10 +14,21 @@ void Player::Init()
 	panzer = TextureManager::LoadTexture(L"resorce/player/player1.png");
 	whippet = TextureManager::LoadTexture(L"resorce/player/player2.png");
 	heavyTank = TextureManager::LoadTexture(L"resorce/player/player3.png");
+
+	doubleJumpTime = 0;
+	speedUpTime = 0;
+	rangeIncreasedTime = 0;
+	threeDirectionTime = 0;
+
+	isDoubleJump = false;
+	isSpeedUp = false;
+	isRangeIncreased = false;
+	isThreeDirection = false;
 }
 
 void Player::Update()
 {
+	ItemManagement();
 	GetKey();
 	Hspeed();
 	Gravity();
@@ -99,4 +110,71 @@ void Player::DownGrade()
 	default:
 		break;
 	}
+}
+
+void Player::UsingItem(Item item)
+{
+	switch (item)
+	{
+	case Player::Item::DOUBLE_JUMP:
+		doubleJumpTime = 10;
+		isDoubleJump = true;
+		break;
+	case Player::Item::SPEED_UP:
+		speedUpTime = 10;
+		isSpeedUp = true;
+		break;
+	case Player::Item::RANGE_INCREASED:
+		rangeIncreasedTime = 10;
+		isRangeIncreased = true;
+		break;
+	case Player::Item::THREE_DIRECTION:
+		threeDirectionTime = 10;
+		isThreeDirection = true;
+		break;
+	}
+}
+
+void Player::ItemManagement()
+{
+	if (doubleJumpTime < 0)
+	{
+		doubleJumpTime = 0;
+		isDoubleJump = false;
+	}
+	else
+	{
+		doubleJumpTime -= DXUTGetElapsedTime();
+	}
+
+	if (speedUpTime < 0)
+	{
+		speedUpTime = 0;
+		isSpeedUp = false;
+	}
+	else
+	{
+		speedUpTime -= DXUTGetElapsedTime();
+	}
+
+	if (rangeIncreasedTime < 0)
+	{
+		rangeIncreasedTime = 0;
+		isRangeIncreased = false;
+	}
+	else
+	{
+		rangeIncreasedTime -= DXUTGetElapsedTime();
+	}
+
+	if (threeDirectionTime < 0)
+	{
+		threeDirectionTime = 0;
+		isThreeDirection = false;
+	}
+	else
+	{
+		threeDirectionTime -= DXUTGetElapsedTime();
+	}
+
 }
