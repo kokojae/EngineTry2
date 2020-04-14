@@ -36,6 +36,12 @@
     <Filter Include="GameObject\Item\Base">
       <UniqueIdentifier>{ebac7dac-515c-41e5-8458-868edce65ecc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Bullet">
+      <UniqueIdentifier>{b18d161a-8bb2-418a-99b4-5f24f3a6335b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject\Bullet\Base">
+      <UniqueIdentifier>{2f7117c1-699a-4c48-ac3b-d5be54ff43c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -152,6 +158,9 @@
     <ClCompile Include="Item.cpp">
       <Filter>GameObject\Item\Base</Filter>
     </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>GameObject\Bullet\Base</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DXUT\Optional\SDKsound.h">
@@ -208,6 +217,9 @@
     </ClInclude>
     <ClInclude Include="Item.h">
       <Filter>GameObject\Item\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>GameObject\Bullet\Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

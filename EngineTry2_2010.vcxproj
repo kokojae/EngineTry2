@@ -386,6 +386,7 @@
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
     <ClCompile Include="BoxCollider.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -402,6 +403,7 @@
     <ClCompile Include="TextureManager.cpp" />
     <ClInclude Include="Block.h" />
     <ClInclude Include="BoxCollider.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
