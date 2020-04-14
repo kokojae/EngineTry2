@@ -7,7 +7,7 @@ double GameManager::changeTime = 0;
 
 void GameManager::Init()
 {
-	SceneManager::LoadScene(SceneManager::Scene::Intro);
+	SceneManager::LoadScene(SceneManager::Scene::Stage1);
 
 	changeTime = DXUTGetTime();
 }

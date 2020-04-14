@@ -63,6 +63,10 @@ void Player::GetKey()
 			force.y = -15;
 		}
 	}
+	if (GetAsyncKeyState('Z'))
+	{
+		ObjectManager::Instantiate<Flak>(position)->SetBullet(position, 1000, 3, 10);
+	}
 }
 
 void Player::Hspeed()

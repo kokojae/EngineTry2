@@ -161,6 +161,9 @@
     <ClCompile Include="Bullet.cpp">
       <Filter>GameObject\Bullet\Base</Filter>
     </ClCompile>
+    <ClCompile Include="Flak.cpp">
+      <Filter>GameObject\Bullet</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DXUT\Optional\SDKsound.h">
@@ -220,6 +223,9 @@
     </ClInclude>
     <ClInclude Include="Bullet.h">
       <Filter>GameObject\Bullet\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Flak.h">
+      <Filter>GameObject\Bullet</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

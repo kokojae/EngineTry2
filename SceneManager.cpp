@@ -28,7 +28,7 @@ void SceneManager::LoadScene(Scene scene)
 	case SceneManager::Scene::Credit:
 		break;
 	case SceneManager::Scene::Stage1:
-		for (int i = -10; i < 10; i++)
+		for (int i = -5; i < 5; i++)
 		{
 			ObjectManager::Instantiate<Block>({ static_cast<float>(i * 320),400 });
 		}
@@ -36,7 +36,7 @@ void SceneManager::LoadScene(Scene scene)
 		GameManager::player = ObjectManager::Instantiate<Player>();
 		break;
 	case SceneManager::Scene::Stage2:
-		for (int i = -10; i < 10; i++)
+		for (int i = -5; i < 5; i++)
 		{
 			ObjectManager::Instantiate<Block>({ static_cast<float>(i * 320),400 });
 		}

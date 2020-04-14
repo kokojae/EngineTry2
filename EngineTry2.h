@@ -2,7 +2,7 @@
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
-#define WINDOWED false
+#define WINDOWED true
 
 // Components
 #include "BoxCollider.h"
@@ -16,6 +16,11 @@
 #include "Block.h"
 // Character
 #include "Player.h"
+// Item
+#include "Item.h"
+// Bullet
+#include "Bullet.h"
+#include "Flak.h"
 
 // Managers
 #include "Camera.h"
