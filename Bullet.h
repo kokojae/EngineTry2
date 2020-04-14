@@ -7,7 +7,10 @@ public:
 	D3DXVECTOR2 direction;
 	float speed;
 	float range;
+	float damage;
 
-	virtual void SetBullet(D3DXVECTOR2 a_directionfloat,float a_speed, float a_range) = 0;
+	void RangeManagement();
+
+	virtual void SetBullet(D3DXVECTOR2 playerPosition, float a_speed, float a_range, float a_damage) = 0;
 };
 
