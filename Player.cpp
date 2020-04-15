@@ -63,9 +63,9 @@ void Player::GetKey()
 			force.y = -15;
 		}
 	}
-	if (GetAsyncKeyState('Z'))
+	if (MouseManager::leftBtn)
 	{
-		ObjectManager::Instantiate<Flak>(position)->SetBullet(position, 1000, 3, 10);
+		ObjectManager::Instantiate<Flak>(position)->SetBullet(position, 1000, 1, 0);
 	}
 }
 
