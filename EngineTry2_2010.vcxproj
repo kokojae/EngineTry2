@@ -389,6 +389,7 @@
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyAlpha.cpp" />
     <ClCompile Include="Flak.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -408,6 +409,7 @@
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyAlpha.h" />
     <ClInclude Include="Flak.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
