@@ -33,6 +33,8 @@ void SceneManager::LoadScene(Scene scene)
 			ObjectManager::Instantiate<Block>({ static_cast<float>(i * 320),400 });
 		}
 
+		ObjectManager::Instantiate<EnemyAlpha>({ -200, 0 });
+
 		GameManager::player = ObjectManager::Instantiate<Player>();
 		break;
 	case SceneManager::Scene::Stage2:

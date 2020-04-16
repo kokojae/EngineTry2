@@ -14,13 +14,15 @@
 #include "Text.h"
 // Block
 #include "Block.h"
-// Character
-#include "Player.h"
-// Item
-#include "Item.h"
 // Bullet
 #include "Bullet.h"
 #include "Flak.h"
+// Character
+#include "Enemy.h"
+#include "EnemyAlpha.h"
+#include "Player.h"
+// Item
+#include "Item.h"
 
 // Managers
 #include "Camera.h"
