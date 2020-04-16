@@ -25,6 +25,8 @@ public:
 	bool isRangeIncreased;
 	bool isThreeDirection;
 
+	int point;
+
 	void Init();
 	void Update();
 	void LateUpdate();

@@ -24,6 +24,8 @@ void Player::Init()
 	isSpeedUp = false;
 	isRangeIncreased = false;
 	isThreeDirection = false;
+
+	int point = 0;
 }
 
 void Player::Update()
@@ -65,7 +67,7 @@ void Player::GetKey()
 	}
 	if (MouseManager::leftBtn)
 	{
-		ObjectManager::Instantiate<Flak>(position)->SetBullet(position, 1000, 1, 0);
+		ObjectManager::Instantiate<Flak>(position)->SetBullet(this, position, 1000, 1, 10);
 	}
 }
 
