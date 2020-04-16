@@ -10,6 +10,6 @@ public:
 	void SettingForce();
 	void CollisionCheck();
 
-	void SetBullet(D3DXVECTOR2 playerPosition, float a_speed, float a_range, float a_damage)override;
+	void SetBullet(GameObject* a_launcher, D3DXVECTOR2 playerPosition, float a_speed, float a_range, float a_damage)override;
 };
 

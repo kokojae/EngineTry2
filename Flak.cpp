@@ -1,5 +1,6 @@
 #include "DXUT.h"
 #include "Flak.h"
+#include "EngineTry2.h"
 
 void Flak::Init()
 {
@@ -31,8 +32,9 @@ void Flak::CollisionCheck()
 	inst = PlaceMeeting({ 0,0 }, Layer::ENEMY | Layer::OBSTACLE);
 	if (inst != nullptr)
 	{
-		// 利 单固瘤 贸府
-		// 肚绰
+		Enemy* enemy = dynamic_cast<Enemy*>(inst);
+		if (enemy != nullptr)
+			enemy->Damaged(damage, this);
 		// 厘局拱 单固瘤 贸府
 		destroy = true;
 		return;
@@ -47,8 +49,9 @@ void Flak::CollisionCheck()
 	}
 }
 
-void Flak::SetBullet(D3DXVECTOR2 playerPosition, float a_speed, float a_range, float a_damage)
+void Flak::SetBullet(GameObject* a_launcher, D3DXVECTOR2 playerPosition, float a_speed, float a_range, float a_damage)
 {
+	launcher = a_launcher;
 	auto diff = MouseManager::position - playerPosition;
 	D3DXVec2Normalize(&direction, &diff);
 	speed = a_speed;
