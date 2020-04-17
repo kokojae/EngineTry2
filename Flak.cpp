@@ -56,6 +56,7 @@ void Flak::SetBullet(GameObject* a_launcher, D3DXVECTOR2 playerPosition, float a
 	D3DXVec2Normalize(&direction, &diff);
 	speed = a_speed;
 	range = a_range;
+	damage = a_damage;
 
 	info.degree = D3DXToDegree(atan2(direction.y, direction.x));
 }
