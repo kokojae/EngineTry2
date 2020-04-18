@@ -7,3 +7,9 @@ void EnemyAlpha::Init()
 	hp = 100;
 	point = 100;
 }
+
+void EnemyAlpha::Update()
+{
+	Hovering();
+	AddForce();
+}

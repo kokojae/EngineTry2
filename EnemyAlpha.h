@@ -5,5 +5,6 @@ class EnemyAlpha :
 {
 public:
 	void Init()override;
+	void Update()override;
 };
 

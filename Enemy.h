@@ -8,7 +8,10 @@ class Enemy :
 public:
 	float hp;
 	int point;
+	bool isIncrease = true;
 
 	virtual void Damaged(float damage, Bullet* bullet);
+
+	void Hovering();
 };
 
