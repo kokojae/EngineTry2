@@ -13,5 +13,6 @@ public:
 	virtual void Damaged(float damage, Bullet* bullet);
 
 	void Hovering();
+	// 플레이어 탐지
 };
 
