@@ -18,12 +18,16 @@ void Enemy::Damaged(float damage, Bullet* bullet)
 
 void Enemy::Hovering()
 {
-	if (force.y <= 5 && isIncrease)
-		force.y -= 0.3;
-	else
-		isIncrease = !isIncrease;
-	if (force.y >= -5 && !isIncrease)
+	if (isIncrease)
+	{
 		force.y += 0.3;
+		if (force.y >= 5)
+			isIncrease = !isIncrease;
+	}
 	else
-		isIncrease = !isIncrease;
+	{
+		force.y -= 0.3;
+		if (force.y <= -5)
+			isIncrease = !isIncrease;
+	}
 }
