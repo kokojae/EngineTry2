@@ -42,6 +42,9 @@
     <Filter Include="GameObject\Bullet\Base">
       <UniqueIdentifier>{2f7117c1-699a-4c48-ac3b-d5be54ff43c0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="GameObject\Character\Base">
+      <UniqueIdentifier>{7b88b70b-2089-43e9-90fe-c04a7462b435}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="DXUT\Optional\directx.ico">
@@ -164,11 +167,11 @@
     <ClCompile Include="Flak.cpp">
       <Filter>GameObject\Bullet</Filter>
     </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>GameObject\Character</Filter>
-    </ClCompile>
     <ClCompile Include="EnemyAlpha.cpp">
       <Filter>GameObject\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>GameObject\Character\Base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -233,11 +236,11 @@
     <ClInclude Include="Flak.h">
       <Filter>GameObject\Bullet</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>GameObject\Character</Filter>
-    </ClInclude>
     <ClInclude Include="EnemyAlpha.h">
       <Filter>GameObject\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>GameObject\Character\Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
