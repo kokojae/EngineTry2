@@ -7,19 +7,6 @@ void Flak::Init()
 	SetObject(L"PlayerBullet", 5, L"resorce/bullet/bullet.png", { 70,30 }, { 70,30 }, Layer::PLAYER_BULLET);
 }
 
-void Flak::Update()
-{
-	SettingForce();
-	AddForce();
-	CollisionCheck();
-	RangeManagement();
-}
-
-void Flak::SettingForce()
-{
-	force = direction * speed * DXUTGetElapsedTime();
-}
-
 void Flak::CollisionCheck()
 {
 	GameObject* inst = PlaceMeeting({ 0,0 }, Layer::BLOCK | Layer::BLOCK_UP);
