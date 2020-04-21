@@ -17,6 +17,7 @@
 // Bullet
 #include "Bullet.h"
 #include "Flak.h"
+#include "Laser.h"
 // Character
 #include "Enemy.h"
 #include "EnemyAlpha.h"
